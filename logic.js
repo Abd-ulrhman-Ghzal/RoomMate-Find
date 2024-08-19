@@ -6,43 +6,52 @@ let Fyesnobtns=document.querySelectorAll(".Fbtns");
         let number1=document.querySelectorAll('#one');
         let number2=document.querySelectorAll('#two');
         let number3=document.querySelectorAll('#three');
-        let counterElement=document.getElementById('min-max-num')
+        let counterElement=document.getElementById('min-max-num');
+        let sideTxt=document.getElementById('side-txt')
         let counter=1;
         let pagenumber=1;
+
+        
+        
         counterElement.innerHTML=counter;
-
-
+        
+        
         if(pagenumber === 1){
-                page1.style.display='block'
-                page2.style.display='none'
-                page3.style.display='none'
+            page1.style.display='block'
+            page2.style.display='none'
+            page3.style.display='none'
+                sideTxt.innerHTML='Lets create an account!'
             }else if(pagenumber === 2){
                 page1.style.display='none'
                 page2.style.display='flex'
                 page3.style.display='none'
+                sideTxt.innerHTML='why are you using Roomyco?'
             }else if(pagenumber === 3){
                 page1.style.display='none'
                 page2.style.display='none'
                 page3.style.display='flex'
+                sideTxt.innerHTML='Tell us more about you'
             }
-        function loadstep1(){
-            pagenumber = 1
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function(){
-                page1.style.display='block'
-                page2.style.display='none'
-                page3.style.display='none'
+            function loadstep1(){
+                pagenumber = 1
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function(){
+                    page1.style.display='block'
+                    page2.style.display='none'
+                    page3.style.display='none'
                 for(let i=0;i<number1.length;i++){
                     number1[i].style.cssText='box-shadow: 0px 0px 1px 3px #2387C2;'
                 }
                 for(let i=0;i<number2.length;i++){
                     number2[i].style.cssText='color:#2387C2;background-color:white'
                 }
+                sideTxt.innerHTML='Lets create an account!'
+            }
+            xhttp.open("GET", "");
+            xhttp.send();
         }
-        xhttp.open("GET", "");
-        xhttp.send();
-    }
         function loadstep2(){
+            
             pagenumber = 2
             const xhttp = new XMLHttpRequest();
             xhttp.onload = function(){
@@ -58,9 +67,10 @@ let Fyesnobtns=document.querySelectorAll(".Fbtns");
                 for(let i=0;i<number2.length;i++){
                     number3[i].style.cssText='box-shadow:none'
                 }
-        }
-        xhttp.open("GET", "");
-        xhttp.send();
+                sideTxt.innerHTML='why are you using Roomyco?'
+            }
+            xhttp.open("GET", "");
+            xhttp.send();
         }
         function loadstep3(){
             pagenumber = 3
@@ -74,12 +84,14 @@ let Fyesnobtns=document.querySelectorAll(".Fbtns");
                 for(let i=0;i<number3.length;i++){
                     number3[i].style.cssText='box-shadow: 0px 0px 1px 3px #2387C2;'
                 }
-        }
-        xhttp.open("GET", "");
-        xhttp.send();
+                sideTxt.innerHTML='Tell us more about you'
+            }
+            xhttp.open("GET", "");
+            xhttp.send();
         }
         function dropmenu(id){
             let selectedul=document.getElementById(`${id}`)
+            let allul=document.querySelectorAll('ul')
             if(selectedul.classList.contains('active')){
                 selectedul.classList.remove('active')
             }else{
@@ -117,4 +129,5 @@ let Fyesnobtns=document.querySelectorAll(".Fbtns");
             counter = counter + 1
             counterElement.innerHTML=counter
         }
-     
+        
+    

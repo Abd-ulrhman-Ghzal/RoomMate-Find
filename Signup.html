@@ -26,7 +26,7 @@
        <div class="LoginPage">
         <div class="container" style="margin: 20px 0;">
             <div class="row row-cols-1 row-cols-lg-12" style="min-height: 80svh; justify-content: space-between; gap: 30px;" >
-                <div class="col col-lg-3" style="display: flex; flex-direction: column; justify-content: center; align-items: center; ">
+                <div class="col col-lg-3" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
                     <div style="display: flex; align-items: flex-start; gap: 20px;" class="logo">
                         <div><img src="./images/logo.png" alt="" /></div>
                         <div>
@@ -34,7 +34,7 @@
                             <p style="letter-spacing: 10px; color: #2387C2;">ROOMMATE</p>
                         </div>
                     </div>
-                    <h1 class="crateAccountTxt text-center">Let's create an account!</h1>
+                    <h1 class="crateAccountTxt text-center" id="side-txt"></h1>
                 </div>
                 <div class="col smNums">
                     <div style="display: flex; justify-content: center; align-items: center; gap: 50px;">
@@ -49,14 +49,14 @@
                                     <h1 class="text-center">Welcome to roomyco!</h1>
                                     <div id="F-page" style="display: flex; flex-direction: column; gap: 20px;">
                                         <div  class="f-name-l-name">
-                                            <input type="text" placeholder="First Name" required class="f-name" id="f-name"/>
-                                            <input type="text" placeholder="Last Name" required class="l-name" id="l-name"/>
+                                            <input type="text" placeholder="First Name"  class="f-name" id="f-name"/>
+                                            <input type="text" placeholder="Last Name"  class="l-name" id="l-name"/>
                                         </div>
                                         <div>
-                                            <input type="text" placeholder="Whatsapp Number" required class="num" id="num"/>
+                                            <input type="text" placeholder="Whatsapp Number"  class="num" id="num"/>
                                         </div>
                                         <div>
-                                            <input type="password" placeholder="Password" required  class="pass" id="pass"/>
+                                            <input type="password" placeholder="Password"   class="pass" id="pass"/>
                                         </div>
                                         <div style="display: flex; align-items: center; justify-content: space-between;">
                                             <p >You are?</p>
@@ -71,7 +71,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="button" class="main-btn" id="btn-step1" onclick="loadstep2()">Next</button>
+                                        <div style="display: flex;">
+                                            <button type="button" class="main-btn" id="btn-step1" onclick="loadstep2()">Next</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="SSignUp-page" id="SSignUp-page" >
@@ -90,7 +92,7 @@
                                             <label for="3check">I want to list my place only</label>
                                         </div>
                                     </div>
-                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                                         <button type="button" class="sec-btn" onclick="loadstep1()">Prev</button>
                                         <button type="button" class="main-btn" onclick="loadstep3()">Next</button>
                                     </div>
@@ -99,8 +101,8 @@
                                     <div style="display: flex; flex-direction: column; gap: 10px;">
                                         <p>What is your location?</p>
                                         <div style="display: flex; align-items: center;  gap: 10px; flex-wrap: wrap;">
-                                            <div class="dropmenu" onclick="dropmenu('Country')">
-                                                <div style="display: flex; gap: 40px; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
+                                            <div class="dropmenu" onclick="dropmenu('Country')" style="flex-grow: 1;">
+                                                <div style="display: flex; justify-content:space-between; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative; ">
                                                     <p>Country</p>
                                                     <img src="./images/caret-down-fill.png" alt=""  style="width: 15px;"/>
                                                     <ul class="menu" id="Country">
@@ -109,8 +111,8 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="dropmenu" onclick="dropmenu('city')">
-                                                <div style="display: flex; gap: 40px; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
+                                            <div class="dropmenu" onclick="dropmenu('city')" style="flex-grow: 1;">
+                                                <div style="display: flex; justify-content:space-between; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
                                                     <p>City</p>
                                                     <img src="./images/caret-down-fill.png" alt=""  style="width: 15px;"/>
                                                     <ul class="menu" id="city">
@@ -123,8 +125,8 @@
                                     </div>
                                     <div style="display: flex;  align-items: center; gap: 10px; flex-wrap: wrap;">
                                         <p>Where are you from?</p>
-                                        <div class="dropmenu" onclick="dropmenu('Place')">
-                                            <div style="display: flex;  gap: 40px; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
+                                        <div class="dropmenu" onclick="dropmenu('Place')" style="flex-grow: 1;">
+                                            <div style="display: flex;  justify-content:space-between; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
                                                 <p>Select...</p>
                                                 <img src="./images/caret-down-fill.png" alt=""  style="width: 15px;"/>
                                                 <ul class="menu" id="Place" >
@@ -136,8 +138,8 @@
                                     </div>
                                     <div style="display: flex;  align-items: center; gap: 10px; flex-wrap: wrap;">
                                         <p>What’s your religion?</p>
-                                        <div class="dropmenu" onclick="dropmenu('Religion')">
-                                            <div style="display: flex; gap: 40px; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
+                                        <div class="dropmenu" onclick="dropmenu('Religion')" style="flex-grow: 1;">
+                                            <div style="display: flex; justify-content:space-between; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
                                                 <p>Select...</p>
                                                 <img src="./images/caret-down-fill.png" alt=""  style="width: 15px;"/>
                                                 <ul class="menu" id="Religion">
@@ -147,11 +149,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                                    <div style="display: flex; flex-direction: column; gap: 10px; ">
                                         <p>Date of brith</p>
                                         <div style="display: flex; align-items: center;  gap: 10px; flex-wrap: wrap;">
-                                            <div class="dropmenu" onclick="dropmenu('Day')">
-                                                <div style="display: flex; gap: 40px; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
+                                            <div class="dropmenu" onclick="dropmenu('Day')" style="flex-grow: 1;">
+                                                <div style="display: flex; justify-content:space-between; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
                                                     <p>Day</p>
                                                     <img src="./images/caret-down-fill.png" alt=""  style="width: 15px;"/>
                                                     <ul class="menu" id="Day">
@@ -161,8 +163,8 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="dropmenu" onclick="dropmenu('Month')">
-                                                <div style="display: flex; gap: 40px; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
+                                            <div class="dropmenu" onclick="dropmenu('Month')" style="flex-grow: 1;">
+                                                <div style="display: flex; justify-content:space-between; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
                                                     <p>Month</p>
                                                     <img src="./images/caret-down-fill.png" alt=""  style="width: 15px;"/>
                                                     <ul class="menu" id="Month">
@@ -172,8 +174,8 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="dropmenu" onclick="dropmenu('Year')">
-                                                <div style="display: flex; gap: 40px; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
+                                            <div class="dropmenu" onclick="dropmenu('Year')" style="flex-grow: 1;">
+                                                <div style="display: flex; justify-content:space-between; align-items: center; border: 1px solid rgba(0, 0, 0, 0.200); padding: 10px 20px; border-radius: 999px; position: relative;">
                                                     <p>Year</p>
                                                     <img src="./images/caret-down-fill.png" alt=""  style="width: 15px;"/>
                                                     <ul class="menu" id="Year">
@@ -186,32 +188,31 @@
                                         </div>
                                     </div>
                                     <div style="display: flex;  align-items: center; gap: 10px; flex-wrap: wrap;">
-                                        <p>Count of people prefer to live with</p>
+                                        <p class="grow">Count of people prefer to live with</p>
                                         <div class="counter-con">
                                             <span class="min" onclick="handelmin()"></span>
                                             <p id="min-max-num"></p>
                                             <span class="max" onclick="handelmax()"></span>
                                         </div>
                                     </div>
-                                    <div style="display: flex;  align-items: center; gap: 10px; ">
-                                        <p>Do you prefer any pets?</p>
+                                    <div style="display: flex;  align-items: center; gap: 10px; flex-wrap: wrap;">
+                                        <p class="grow">Do you prefer any pets?</p>
                                         <div class="yes-no-container">
                                             <button type="button" class="Fbtns active-btn" onclick="check()" id="yes">Yes</button>
                                             <button type="button" class="Fbtns" onclick="check()" id="no" >No</button>
                                         </div>
                                     </div>
-                                    <div style="display: flex;  align-items: center; gap: 10px; ">
-                                        <p>Do you smoke?</p>
+                                    <div style="display: flex;  align-items: center; gap: 10px; flex-wrap: wrap;">
+                                        <p class="grow">Do you smoke?</p>
                                         <div class="yes-no-container">
                                             <button type="button" class="Sbtns active-btn" onclick="check2()" id="yes">Yes</button>
                                             <button type="button" class="Sbtns" onclick="check2()" id="no" >No</button>
                                         </div>
                                     </div>
-                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                                         <button type="button" class="sec-btn" onclick="loadstep2()">Prev</button>
                                         <button type="button" class="main-btn">Next</button>
                                     </div>
-                                    
                                 </div>
                         </form>
                 </div>

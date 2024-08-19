@@ -151,7 +151,7 @@ p{
     background-color: #2387C2;
     border-radius: 10px;
     color: white;
-    width: 100%;
+    flex-grow: 1;
 }
 
 .sec-btn{
@@ -160,8 +160,8 @@ p{
     border-color: #2387C2;
     color: #2387C2;
     background-color: white;
-    width: 100%;
     border-radius: 10px;
+    flex-grow: 1;
 }
 .form-col,.SSignUp-page{
     display: flex; 
@@ -322,6 +322,7 @@ form{
     background-color: #F6F6F6;
     border-radius:9999px ;
     width: fit-content;
+    
  }
  
 
@@ -331,9 +332,18 @@ form{
     background-color: transparent;
     padding: 5px 25px;
     border-radius: 999px;
+
  }
 
  .active-btn{
     background-color: #FFD433 !important;
     color: white;
+ }
+
+ .notValid{
+    border: 1px solid red;
+ }
+
+ .grow{
+    flex-grow: 1;
  }
