@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
+    
+</head>
+
+<body>
+        <div class="login-back">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-2" >
+                    <div class="col" style="display: flex; gap: 40px; flex-direction: column;">
+                        <div style="display: flex; gap: 20px; align-items: center;" class="logo">
+                            <img src="./images/logo.png" alt=""/>
+                            <div>
+                                <h3 style="letter-spacing: 10px; color: #2387C2;" >ROOMYCO</h3>
+                                <p style="letter-spacing: 10px; color: #2387C2;">ROOMMATE</p>
+                            </div>
+                        </div>
+                        <div class="hideOnSmallscreen" id="login-img">
+                            <img src="./images/Computer login-amico 1.png" alt="" style="width: 100%;"/>
+                        </div>
+                    </div>
+                    <div class="col second-sec">
+                        <form id="logIn-form " action="">
+                            <div class="tab">
+                                <div class="text-center">
+                                    <h3 class="main-txt-color">Welcome Back!</h3>
+                                    <p>Sign in to your account</p>
+                                </div>
+                                <input type="text"  class="phone" placeholder="Whatsapp Number">
+                                <input type="password"  class="password" placeholder="Password">
+                                <div class="text-center">
+                                    <a href="#" >Forgot Password?</a>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-around; gap: 20px;flex-wrap: wrap; padding-top: 20px;">
+                                    <button class="main-btn" type="submit" >Sign In</button>
+                                    <button class="sec-btn"><a href="./Signup.html">Sign Up</a></button>
+                                </div>
+                                <p class="otherOptions">Or sign in with</p>
+                                <div style="display: flex; justify-content: space-evenly; align-items: center;flex-wrap: wrap;">
+                                    <div class="icon-border apple"></div>
+                                    <div class="icon-border google"></div>
+                                    <div class="icon-border facebook"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

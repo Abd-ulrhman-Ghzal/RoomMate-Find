@@ -1,0 +1,339 @@
+body{
+    font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
+
+.LoginPage{
+    display: flex;
+    min-height: 100svh;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/Rectangle\ 1043.png');
+    background-size: cover;
+}
+.background{
+    position: relative;
+}
+.login-back{
+    min-height: 100svh;
+    min-width: 50svw;
+    background-image: url('../images/Rectangle\ 1043.png');
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    left: 0;
+    top: 0;
+}
+.white-reg{
+    min-height: 100svh;
+    min-width: 65svw;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 50% 0 0 50% / 100% 0 0 100%;
+}
+.one{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #2387C2;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2387C2;
+    background-color: white;
+    box-shadow: 0px 0px 1px 3px #2387C2;
+}
+.two{
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #2387C2;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2387C2;
+    background-color: white;
+}
+.three{
+    top: 60%;
+    left: 0;
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #2387C2;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2387C2;
+    background-color: white;
+}
+.steps{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #2387C2;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2387C2;
+    background-color: white;
+}
+
+.steps:first-child{
+    box-shadow: 0px 0px 1px 3px #2387C2;
+}
+
+p{
+    margin: 0px !important;
+}
+
+
+
+ .crateAccountTxt{
+   color:#2387C2 ; 
+ }
+ 
+ .smNums{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ 
+
+
+
+
+ .f-name,.l-name{
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.076);
+ }
+
+
+.f-name-l-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+.num,.pass{
+    width: 100%;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.076);
+}
+
+.main-btn{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    background-color: #2387C2;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+}
+
+.sec-btn{
+    padding: 10px 50px;
+    outline: none;
+    border-color: #2387C2;
+    color: #2387C2;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+.form-col,.SSignUp-page{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.check-boxes{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    
+}
+
+.check-boxes div{
+    display: flex;
+    align-items: center;
+}
+
+div label{
+    margin-left: 20px;
+}
+input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+}
+
+input[type=checkbox]:checked{
+    accent-color: #F3704A;
+    color: white;
+}
+
+form{
+    width: 100%;
+}
+
+.THSignUp-page{
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+
+
+@media (max-width: 992px){
+    .title{
+        justify-content: center;
+    }
+    form{
+        width: 100%;
+    }
+    .f-name,.l-name{
+        width: 100%;
+    }
+    .white-reg{
+        display: none;
+    }
+    .login-back{
+        min-width: 100svw;
+    }
+    .nums{
+        display: flex !important;
+    }
+    .background{
+        display: none;
+    }
+    .THSignUp-page{
+        align-items: center;
+        text-align: center;
+    }
+    .THSignUp-page div{
+        justify-content: center;
+    }
+ }
+
+
+ @media (min-width: 992px) { 
+    
+    .crateAccountTxt,.logo{
+        height:100%;
+     }
+     .f-name,.l-name{
+        width: 45%;
+     }
+     .f-name-l-name{
+        justify-content: space-between !important;
+        gap: 0;
+     }
+     .smNums{
+        display: none !important;
+     }
+     .LoginPage{
+        background: none !important;
+     }
+ }
+
+ .dropmenu{
+    position: relative;
+    cursor: pointer;
+ }
+
+ .menu{
+    display: none;
+    flex-direction: column; 
+    position: absolute; 
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 130%;
+    border: 1px solid rgba(0, 0, 0, 0.200);
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: white;
+    z-index: 3;
+ }
+
+ .menu li{
+    padding: 10px 0px;
+ }
+
+ .active{
+    display: flex;
+ }
+
+ .counter-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+ }
+ .min,.max{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 999px;
+    background-color: #F6F6F6;
+ }
+ .min::before,.max::before{
+    position: absolute;
+    color: #2387C2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+ }
+ .min::before{
+    content: '-';
+ }
+ .max::before{
+    content: '+';
+ }
+
+ .yes-no-container{
+    background-color: #F6F6F6;
+    border-radius:9999px ;
+    width: fit-content;
+ }
+ 
+
+ .yes-no-container button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 5px 25px;
+    border-radius: 999px;
+ }
+
+ .active-btn{
+    background-color: #FFD433 !important;
+    color: white;
+ }

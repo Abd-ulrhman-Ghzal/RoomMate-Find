@@ -1,0 +1,150 @@
+body{
+    font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
+
+
+.login-back{
+    min-height: 100svh;
+    background-image: url('../images/Rectangle\ 1043.png');
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.main-txt-color{
+    color: #035781;
+}
+
+.col{
+padding: 12px 40px !important;
+}
+
+
+
+.second-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone,.password{
+    border: 1px solid rgba(0, 0, 0, 0.048);
+    outline: none;
+    width: 100%;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    position: relative;
+}
+
+
+a{
+    text-decoration: none !important;
+}
+
+@media (min-width: 992px) { 
+    .login-back::after{
+        position: absolute;
+        content: '';
+        width: 50%;
+        height: 100%;
+        border-radius: 999px 0 0 999px;
+        right: 0;
+        top: 0;
+        background-color: white;
+        z-index: -999;
+    }
+ }
+
+ @media (max-width: 992px){
+    .hideOnSmallscreen{
+        display: none;
+    }
+    .logo{
+        justify-content: center;
+    }
+ }
+
+
+ .main-btn{
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    background-color: #2387C2;
+    border-radius: 10px;
+    color: white !important;
+}
+
+.sec-btn{
+    padding: 10px 50px;
+    border: 1px solid #2387C2;
+    outline: none;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.otherOptions{
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.otherOptions::before{
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    left: 0;
+    top: 70%;
+    background-color: rgba(0, 0, 0, 0.200);
+}
+.otherOptions::after{
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    right: 0;
+    top: 70%;
+    background-color: rgba(0, 0, 0, 0.200);
+}
+
+.icon-border{
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 9999px;
+    position: relative;
+    box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.305);
+}
+
+.apple::before{
+    content: url('../images/Apple.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.google::before{
+    content: url('../images/google.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.facebook::before{
+    content: url('../images/Path\ 789.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
