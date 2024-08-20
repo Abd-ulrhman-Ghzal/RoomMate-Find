@@ -21,6 +21,7 @@
             <span class="one" id="one">1</span>
             <span class="two" id="two">2</span>
             <span class="three" id="three">3</span>
+            <span class="four" id="four">4</span>
         </div>
     </div>
        <div class="LoginPage">
@@ -41,6 +42,7 @@
                         <div class="steps" id="one">1</div>
                         <div class="steps" id="two">2</div>
                         <div class="steps" id="three">3</div>
+                        <div class="steps" id="four">4</div>
                     </div>
                 </div>
                 <div class="col col-lg-7 form-col">
@@ -211,8 +213,25 @@
                                     </div>
                                     <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                                         <button type="button" class="sec-btn" onclick="loadstep2()">Prev</button>
-                                        <button type="button" class="main-btn">Next</button>
+                                        <button type="button" class="main-btn" onclick="loadstep4()">Next</button>
                                     </div>
+                                </div>
+                                <div class="Verify-page" id="Verify-page">
+                                        <div class="v-con">
+                                            <h3>Enter your verification code!</h3>
+                                            <div class="Verify-num">
+                                                <input type="text" maxlength="1" id="Verify-input">
+                                                <input type="text" maxlength="1" id="Verify-input">
+                                                <input type="text" maxlength="1" id="Verify-input">
+                                                <input type="text" maxlength="1" id="Verify-input">
+                                            </div>
+                                            <p>04:58</p>
+                                            <p>I didn’t received the code?<button class="verfiy-btn">Send again</button></p>
+                                            <div class="btns" style="display: flex; flex-direction: column; gap: 10px;">
+                                                <button class="main-btn" type="submit" style="flex-grow: 1;">Verify</button>
+                                                <button class="sec-btn" style="flex-grow: 1;">Not Now</button>
+                                            </div>
+                                        </div>
                                 </div>
                         </form>
                 </div>
