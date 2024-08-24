@@ -159,5 +159,5 @@ let Fyesnobtns=document.querySelectorAll(".Fbtns");
             counterElement.innerHTML=counter
         }
         
-        
-    
+
+        // home page logic

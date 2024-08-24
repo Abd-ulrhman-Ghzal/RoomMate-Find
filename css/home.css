@@ -1,0 +1,614 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500 !important;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+p{
+    margin: 0 !important;
+}
+
+section{
+    padding: 40px 0;
+}
+
+.header{
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-top:12px ;
+    padding-bottom: 12px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% ,0);
+    z-index: 1;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.lang,.chat-drop,.menu-drop{
+    margin-top: 20px !important;
+    box-shadow: 0px 4px 4px 0px #0000005c;
+    border-radius: 10px;
+}
+
+.lang li{
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.lang li:hover{
+    color: #035781;
+}
+
+.nav-links li{
+ cursor: pointer;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+.nav-links li a:hover{
+    color: #035781;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-menu button{
+    border: none;
+    border-radius: 9999px;
+    outline: none;
+    background-color: transparent;
+}
+
+.carousel{
+    position: relative;
+    min-height: 55svh;
+}
+
+.carousel-inner,.carousel-item,.carousel-item img{
+    min-height: 55svh !important;
+}
+
+.search-bar{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.search-bar p{
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.500);
+    border-radius: 999px;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    width: fit-content;
+    
+}
+
+form{
+    padding: 10px;
+    background-color: #D9D9D7D4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap
+}
+
+.search-input div input{
+    background-color: #F6F6F6;
+    border: none;
+    flex-grow: 1;
+}
+
+form input:focus{
+    outline: none;
+}
+.search-input{
+    background-color: #F6F6F6;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+}
+
+
+.search-btn{
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right,#2387C2,#11405C);
+    width: 136px;
+    color: white;
+    padding: 5px 10px;
+}
+
+
+
+.citys-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.city{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.con{
+    position: relative;
+}
+
+.l-c{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    background-color: #D9D9D9BF;
+    border-radius: 999px;
+    border: none;
+}
+
+.r-c{
+    border: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+    background-color: #D9D9D9BF;
+    border-radius: 999px;
+}
+
+
+
+.card-conainer{
+    overflow-x: scroll;
+    gap: 30px;
+    display: inline-flex;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.card-conainer::-webkit-scrollbar{
+    -webkit-appearance:none ;
+}
+
+.appartment-card{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+
+}
+
+.card-txt{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #F2EACC;
+    border-radius: 0 0 20px 20px;
+}
+
+.l-c::before{
+    content: url('../images/Arrow\ 2.png');
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.r-c::before{
+    content: url('../images/Arrow\ 1.png');
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.r-c,.l-c{
+    display: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.r-c:hover,.l-c:hover{
+background-color: #2387C2;
+}
+
+.wrapper{
+    display: flex;
+    gap: 2rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.wrapper .person-img{
+    width: 135px;
+    height: 471px;
+    object-fit: cover;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+.wrapper .person-img:hover{
+    width: 413px;
+}
+.person-card{
+    position: relative;
+}
+.person-info{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 20px;
+    color: white;
+    opacity: 0;
+    transition: 1s;
+}
+
+.person-card:hover .person-info{
+    opacity: 1;
+    bottom: 10%;
+}
+
+.person-card::before{
+    position: absolute;
+    transform: rotate(-90deg);
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    bottom: 20%;
+    left: -5%;
+    width: 142px;
+    height: 36px;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.person-card:hover::before{
+    opacity: 0;
+}
+
+.person-card:nth-child(1)::before{
+    content: 'Ali Saebe';
+}
+.person-card:nth-child(2)::before{
+    content: 'Rama Kita';
+}
+
+.person-card:nth-child(3)::before{
+    content: 'Bana Dogo';
+}
+
+.person-card:nth-child(4)::before{
+    content: 'Ahmed Kita';
+}
+
+.person-card:nth-child(5)::before{
+    content: 'Dana ZAlfa';
+}
+
+
+
+.wrapper::-webkit-scrollbar{
+    -webkit-appearance:none ;
+}
+
+footer{
+    padding-top: 40px;
+}
+
+
+.media{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    gap: 3rem;
+    margin: 0;
+    justify-content: center;
+}
+
+.media li a{
+    text-decoration: none;
+}
+
+.policy,.contact{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0;
+    font-size: 20px;
+}
+
+.contact div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright{
+    padding: 20px 0 ;
+    border-width: 1px 1px 0 1px ;
+    border-color: #AEAEAE ;
+    border-radius:20px 20px 0 0 ;
+    border-style: solid;
+}
+
+.chat-control button{
+    width: 36px;
+    height: 36px;
+    background-color: #F2EACC;
+    border-radius: 9999px;
+    position: relative;
+    padding: 0 !important;
+}
+.chat-control .expand::before{
+    position: absolute;
+    content: url(../images/expand.png);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.dropdown-menu{
+    background-color: #F6F6F6 !important;
+}
+
+.chat-con p{
+    color: #707070;
+}
+
+.chat-control .dots::before{
+    position: absolute;
+    content: url(../images/3\ dots.png);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chat-drop{
+    padding: 10px 20px !important;
+}
+
+.changeaccount-con{
+    width: 310px;
+    background-color: #FFFEF9;
+    align-self: center;
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 #00000040;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bottm-border{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #DAD6C8;
+    top: 45px;
+    left: 0%;
+}
+
+.acc-img{
+    position: relative;
+}
+.acc-img img{
+    clip-path: circle(40%);
+}
+
+.acc-img::before{
+    content: '';
+    background-image: url(../images/Arrow\ 3.png);
+    position: absolute;
+    top: 1px;
+    left: 7px;
+    width: 89%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.acc-img::after{
+    content: '';
+    background-image: url(../images/Arrow\ 4.png);
+    position: absolute;
+    top: 41px;
+    left: 2px;
+    width: 90%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 992px){
+    .logo{
+        justify-content: flex-start !important;
+    }
+    .nav-menu{
+        justify-content: flex-end !important;
+    }
+    form{
+        flex-wrap: nowrap !important;
+    }
+    .media{
+        justify-content: space-between;
+    }
+    .contact div{
+        justify-content: flex-start;
+    }
+}
+
+
+/* chat css */
+
+#Chat-content{
+    display: none;
+}
+
+.chat-dots,.plus{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background-color: #D3CEBA;
+    border: none;
+}
+
+.chat-dots::before{
+    content: url('../images/3\ dots.png');
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.plus::before{
+    content: url('../images/plus.png');
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.chats-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.search input{
+    outline: none;
+     border: none;
+      background-color: #E1DABF;
+       border-radius: 999px;
+     padding: 0.5rem 1rem 0.5rem 3rem; 
+}
+
+.search{
+    position: relative;
+}
+
+.search::before{
+    content: url(../images/search.png);
+    position: absolute;
+    left: 20px;
+    width: 15px;
+    height: 15px;
+    top: 10px;
+}
+
+.active-img{
+    position: relative;
+}
+
+.active-img::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 70%;
+    left: 70%;
+    z-index: 1;
+    background-color: #158A20;
+    border-radius: 999px;
+}
+
+.text-val input{
+    padding: 12px 40px 12px 12px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 999px;
+}
+
+.text-val {
+    position: relative;
+}
+
+.text-val::before{
+    content: url('../images/emoje.png');
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+
+.profile,.mute{
+    background-color: #D3CEBA;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    outline: none;
+    border: none;
+    border-radius: 999px;
+}
+
+.profile::before{
+    position: absolute;
+    content: url(../images/person-fill.png);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mute::before{
+    position: absolute;
+    content: url(../images/bell-fill.png);
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
