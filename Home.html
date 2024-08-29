@@ -28,7 +28,7 @@
                 </div>
                 <div class="col d-none d-lg-block">
                     <ol class="nav-links">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="Home.html">Home</a></li>
                         <li><a href="#">See More</a></li>
                     </ol>
                 </div>
@@ -89,7 +89,11 @@
                                 </li>
                             </ul>
                           </div>
-                        <button><img src="./images/home page/bell-fill.png" alt=""></button>
+                          <div class="notify-icon">
+                            <button id="notification-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="notificationDiv()">
+                              <img id="notification-img" src="./images/home page/bell-fill.png" alt="">
+                            </button>
+                          </div>
                         <div class="dropdown">
                             <button  type="button" data-bs-toggle="dropdown" aria-expanded="false" >
                                 <img src="./images/home page/menu.png" alt="">
@@ -655,6 +659,771 @@
                     </div>
                 </div>
             </div>
+        </main>
+        <main id="notification-content">
+            <div class="container" style="display: flex; justify-content: center; align-items: center;" >
+                <div class="notify">
+                    <div style=" display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <h2>Notifications</h2>
+                        <button class="notify-dots"></button>
+                    </div>
+                    <div class="read-unread-btn">
+                        <button>ALL</button>
+                        <button>Unread</button>
+                    </div>
+                    <section >
+                        <div class="sec-header">
+                            <h4>New</h4>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <div class="col-2" style="position: relative;">
+                                <img src="images/home page/people-3.jpeg" alt="" class="w-100" style="clip-path: circle(40%);">
+                                <img src="images/home page/people-2.png" alt="" class="sec-img">
+                            </div>
+                            <div class="col-7" style="display: flex;align-items: center;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <p>There are a Roommates who matches your profile. Check it out now</p>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;color: #707070;">11m</p>
+                                </div>
+                            </div>
+                            <div class="col-2" style="display: flex;align-items: center; justify-content: center;">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="sec-header">
+                            <h4>Today</h4>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <div class="col-2" >
+                                <div class="icon-con-person"></div>
+                            </div>
+                            <div class="col-7" style="display: flex;align-items: center;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <p>Someone adding your ad to favorites!</p>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;color: #707070;">14h</p>
+                                </div>
+                            </div>
+                            <div class="col-2" style="display: flex;align-items: center; justify-content: center;">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="sec-header">
+                            <h4>Older</h4>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <div class="col-2" style="position: relative;">
+                                <img src="images/home page/people-1.png" alt="" class="w-100" style="clip-path: circle(40%);">
+                            </div>
+                            <div class="col-7" style="display: flex;align-items: center;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <p>Ali Saebe gave you a rating.</p>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;color: #707070;">14h</p>
+                                </div>
+                            </div>
+                            <div class="col-2" style="display: flex;align-items: center; justify-content: center;">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <div class="col-2" >
+                                <div class="icon-con-email"></div>
+                            </div>
+                            <div class="col-7" style="display: flex;align-items: center;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <p>You have a new message!</p>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;color: #707070;">14h</p>
+                                </div>
+                            </div>
+                            <div class="col-2" style="display: flex;align-items: center; justify-content: center;">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <div class="col-2" style="position: relative;">
+                                <img src="images/home page/people-4.jpeg" alt="" class="w-100" style="clip-path: circle(40%);">
+                            </div>
+                            <div class="col-4" style="display: flex;align-items: center;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <p>Dema doghouz request to follow you.</p>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;color: #707070;">1d</p>
+                                </div>
+                            </div>
+                            <div class="col-3" style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
+                                <button class="btn btn-primary" >Confirm</button>
+                                <button class="btn btn-secondary" >Delete</button>
+                            </div>
+                            <div class="col-2" style="display: flex;align-items: center; justify-content: center;">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <div class="col-2" >
+                                <div class="icon-con-person"></div>
+                            </div>
+                            <div class="col-7" style="display: flex;align-items: center;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <p>Someone adding your ad to favorites!</p>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;color: #707070;">2W</p>
+                                </div>
+                            </div>
+                            <div class="col-2" style="display: flex;align-items: center; justify-content: center;">
+                                <!-- <div class="circle"></div> -->
+                            </div>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <div class="col-2" style="position: relative;">
+                                <img src="images/home page/people-1.png" alt="" class="w-100" style="clip-path: circle(40%);">
+                            </div>
+                            <div class="col-7" style="display: flex;align-items: center;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <p>Ali Saebe gave you a rating.</p>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;color: #707070;">14h</p>
+                                </div>
+                            </div>
+                            <div class="col-2" style="display: flex;align-items: center; justify-content: center;">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <div class="col-2" >
+                                <div class="icon-con-email"></div>
+                            </div>
+                            <div class="col-7" style="display: flex;align-items: center;">
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <p>You have a new message!</p>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 400;font-size: 16px;line-height: 24px;color: #707070;">14h</p>
+                                </div>
+                            </div>
+                            <div class="col-2" style="display: flex;align-items: center; justify-content: center;">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <main id="Ad-seeker" style="margin-top: 1rem;">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-12" >
+                    <div class="col col-lg-8">
+                        <div style="position: relative;">
+                            <button class="l-arrow"></button>
+                            <img src="./images/ad img/apartment.png" class="w-100" style="border-radius: 10px 0 0 10px;" alt="">
+                            <button class="r-arrow"></button>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4" >
+                        <div class="person-contact" style="padding: 1rem; height: 100%;">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/home page/people-2.png" class="w-100" style="clip-path: circle(40%);" alt="">
+                                </div>
+                                <div class="col-9" style="display: flex; align-items: center;">
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 20px;line-height: 30px;color: #292C2D;">Rama Kita</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <p>location:</p>
+                                <div>
+                                    <img src="images/ad img/location.png" class="w-100" alt="">
+                                </div>
+                                <p>Al Sharjah</p>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <p>Date of Birth:</p>
+                                <p>25 years old</p>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <p>Life style:</p>
+                                <ol style="list-style: none; display: flex; align-items: center; gap: 1rem; margin: 0;">
+                                    <li class="hopy">Book lover</li>
+                                    <li class="hopy">Photography</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <strong>Description:</strong>
+                                We have a 2 bedrooms available and 1 bathroom. The department is sunny and have special location. 
+                            </div>
+                            <button class=" send">Send message</button>
+                            <button class=" follow">Follow request</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-lg-8 row-cols-12">
+                    <div class="col-12 col-lg-8" style="margin-top: 2rem;">
+                        <ul style="display: flex;flex-wrap: wrap; align-items: center; gap: 2rem; list-style: none; border-bottom: 1px solid gray; padding-bottom: 1rem;">
+                            <li>Overview</li>
+                            <li>Availability and  Budget</li>
+                            <li>Location</li>
+                            <li>Amenities</li>
+                            <li>Suitable for</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-8" style="display: flex; justify-content: center;gap: 1rem ;flex-direction: column; padding-bottom: 1rem; border-bottom: 1px solid gray; margin-bottom: 1rem;">
+                        <h1>Hi there, I have apartment!</h1>
+                        <div class="col-2">
+                            <img src="images/home page/stars.png" class="w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="display: flex; align-items: center;gap: 4rem ; padding-bottom: 1rem; border-bottom: 1px solid gray; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div>
+                                <img src="images/home page/bed.png" alt="" >
+                            </div>
+                            <p>2 Bed room</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div>
+                                <img src="images/home page/bath.png" alt="" >
+                            </div>
+                            <p>1 Bathroom</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div>
+                                <img src="images/home page/apartment.png" alt="" class="w-100">
+                            </div>
+                            <p>Apartment</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="padding-bottom: 1rem; border-bottom: 1px solid gray; margin-bottom: 1rem;">
+                        <div class="col-12">
+                            <h3 style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 20px;line-height: 30px;color: #292C2D;">Availability and  Budget</h3>
+                        </div>
+                        <div class="row row-cols-12">
+                            <div class="col-6" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <p style="
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #707070;
+                                ">Rent</p>
+                                <p style="
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 30px;      
+                                color: #292C2D;
+                                ">$1,000 / month</p>
+                            </div>
+                            <div class="col-6" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <p style="
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #707070;
+                                ">Availability</p>
+                                <p style="
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 30px;      
+                                color: #292C2D;
+                                ">1st August </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="padding-bottom: 1rem; margin-bottom: 1rem;">
+                        <div class="col-12">
+                            <h3 style="
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: #292C2D;">Location</h3>
+                        </div>
+                        <div class="col-12">
+                            <p style="
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #707070; ">Al Jazzat, Al Sharjah</p>
+                        </div>
+                        <div class="col-12">
+                            <img src="images/ad img/map.png" class="w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid gray;">
+                        <div class="col-12">
+                            <h3 style="
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: #292C2D;">Amenities</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-4" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/router.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Wi-Fi</p>
+                            </div>
+                            <div class="col-4" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/parking.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Parking</p>
+                            </div>
+                            <div class="col-4" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/display.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Television</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="padding-bottom: 1rem; margin-bottom: 1rem; ">
+                        <div class="col-12">
+                            <h3 style="
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: #292C2D;">Suitable for</h3>
+                        </div>
+                        <div class="row row-cols-3">
+                            <div class="col" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/person-fill.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Woman</p>
+                            </div>
+                            <div class="col" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/pet.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Pet-allowed</p>
+                            </div>
+                            <div class="col" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/religon.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Islam</p>
+                            </div>
+                            <div class="col" style="display: flex; align-items: center; gap: 0.5rem;margin-top: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/smok.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Smoking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer style="background: linear-gradient(90deg, #E8E8E8 0%, #F6F6F6 100%);padding: 2rem 5rem 0 5rem;">
+                <div class="text-center text-lg-start" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="row row-cols-1 row-cols-lg-12" style="justify-content: space-between; gap: 2rem;">
+                        <div class="col col-lg-3" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div style="display: flex; justify-content: center; gap: 20px;" class="logo">
+                                <div style="width: fit-content; display: flex; justify-content: center; align-items: center; height: 100% ;"><img src="./images/logo.png" alt="" /></div>
+                                <div>
+                                    <h3 style="letter-spacing: 10px; color: #2387C2;" >ROOMYCO</h3>
+                                    <p style="letter-spacing: 10px; color: #2387C2;">ROOMMATE</p>
+                                </div>
+                            </div>
+                            <p>Find your prefer room and choose roommate who agree.</p>
+                            <ol class="media">
+                                <li><a href=""><img src="./images/home page/instagram.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/home page/facebook.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/home page/twitter.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/home page/tiktok.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/home page/whatsapp.png" alt=""></a></li>
+                            </ol>
+                            <p><strong>www.Romyco.com</strong></p>
+                        </div>
+                        <div class="col col-lg-3" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <h3>Terms & policies</h3>
+                            <ol class="policy">
+                                <li>Terms of service</li>
+                                <li>Privacy policy</li>
+                                <li>Cookie policy</li>
+                            </ol>
+                        </div>
+                        <div class="col col-lg-3" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <h3>Contact</h3>
+                            <ol class="contact" >
+                                <div>
+                                    <img src="./images/home page/envelope-fill.png" alt="">
+                                    <p>roomyco@room.com</p>
+                                </div>
+                                <div>
+                                    <img src="./images/home page/telephone-fill.png" alt="">
+                                    <p>+971 586 834 566</p>
+                                </div>
+                                <div>
+                                    <img src="./images/home page/location.png" alt="">
+                                    <p>Emirates</p>
+                                </div>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row text-center" style="justify-content: center; align-items: center;">
+                            <p class="col-10 copyright" >All rights are save 2024 by company.com</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <main id="seeker-roomate" style="margin-top: 1rem;">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-12" >
+                    <div class="col col-lg-8">
+                        <div style="position: relative;">
+                            <button class="l-arrow"></button>
+                            <img src="./images/ad img/apartment.png" class="w-100" style="border-radius: 10px 0 0 10px;" alt="">
+                            <button class="r-arrow"></button>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4" >
+                        <div class="person-contact" style="padding: 1rem; height: 100%;">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="images/home page/people-1.png" class="w-100" style="clip-path: circle(40%);" alt="">
+                                </div>
+                                <div class="col-9" style="display: flex; align-items: center;">
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 20px;line-height: 30px;color: #292C2D;">Ali Saebe</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <p>Date of Birth:</p>
+                                <p>32 years old</p>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <p>Life style:</p>
+                                <ol style="list-style: none; display: flex; align-items: center; gap: 1rem; margin: 0; flex-wrap: wrap;">
+                                    <li class="adjectiver-person">Bets Lover</li>
+                                    <li>-</li>
+                                    <li class="adjectiver-person">Smoking</li>
+                                    <li>-</li>
+                                    <li class="adjectiver-person">Islamic</li>
+                                </ol>
+                            </div>
+                            <div>
+                                <textarea style="min-height: 108px; border-radius: 20px; padding: 1rem; border: 1px solid #CAC6B7; background-color: transparent;" class="w-100" name="" id="" placeholder="Write message to Ali..."></textarea>
+                            </div>
+                            <button class=" send">Send message</button>
+                            <button class=" follow">Follow request</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-lg-8 row-cols-12">
+                    <div class="col-12 col-lg-8" style="margin-top: 2rem;">
+                        <ul style="display: flex;flex-wrap: wrap; align-items: center; gap: 2rem; list-style: none; border-bottom: 1px solid gray; padding-bottom: 1rem;">
+                            <li>Overview</li>
+                            <li>Availability and  Budget</li>
+                            <li>Location</li>
+                            <li>Amenities</li>
+                            <li>Suitable for</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-8" style="display: flex; justify-content: center;gap: 1rem ;flex-direction: column; padding-bottom: 1rem; border-bottom: 1px solid gray; margin-bottom: 1rem;">
+                        <h1>Hi there, I have apartment!</h1>
+                        <div class="col-2">
+                            <img src="images/home page/stars.png" class="w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="display: flex; align-items: center;gap: 4rem ; padding-bottom: 1rem; border-bottom: 1px solid gray; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div>
+                                <img src="images/home page/bed.png" alt="" >
+                            </div>
+                            <p>2 Bed room</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div>
+                                <img src="images/home page/bath.png" alt="" >
+                            </div>
+                            <p>1 Bathroom</p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div>
+                                <img src="images/home page/apartment.png" alt="" class="w-100">
+                            </div>
+                            <p>Apartment</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="padding-bottom: 1rem; border-bottom: 1px solid gray; margin-bottom: 1rem;">
+                        <div class="col-12">
+                            <h3 style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 20px;line-height: 30px;color: #292C2D;">Availability and  Budget</h3>
+                        </div>
+                        <div class="row row-cols-12">
+                            <div class="col-6" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <p style="
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #707070;
+                                ">Rent</p>
+                                <p style="
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 30px;      
+                                color: #292C2D;
+                                ">$1,000 / month</p>
+                            </div>
+                            <div class="col-6" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <p style="
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #707070;
+                                ">Availability</p>
+                                <p style="
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 30px;      
+                                color: #292C2D;
+                                ">1st August </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="padding-bottom: 1rem; margin-bottom: 1rem;">
+                        <div class="col-12">
+                            <h3 style="
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: #292C2D;">Location</h3>
+                        </div>
+                        <div class="col-12">
+                            <p style="
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #707070; ">Al Jazzat, Al Sharjah</p>
+                        </div>
+                        <div class="col-12">
+                            <img src="images/ad img/map.png" class="w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid gray;">
+                        <div class="col-12">
+                            <h3 style="
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: #292C2D;">Amenities</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-4" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/router.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Wi-Fi</p>
+                            </div>
+                            <div class="col-4" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/parking.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Parking</p>
+                            </div>
+                            <div class="col-4" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/display.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Television</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" style="padding-bottom: 1rem; margin-bottom: 1rem; ">
+                        <div class="col-12">
+                            <h3 style="
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 30px;
+                            color: #292C2D;">Suitable for</h3>
+                        </div>
+                        <div class="row row-cols-3">
+                            <div class="col" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/person-fill.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Woman</p>
+                            </div>
+                            <div class="col" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/pet.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Pet-allowed</p>
+                            </div>
+                            <div class="col" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/religon.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Islam</p>
+                            </div>
+                            <div class="col" style="display: flex; align-items: center; gap: 0.5rem;margin-top: 0.5rem;">
+                                <div>
+                                    <img src="images/ad img/smok.png" class="w-100" alt="">
+                                </div>
+                                <p style=" 
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #292C2D;">Smoking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer style="background: linear-gradient(90deg, #E8E8E8 0%, #F6F6F6 100%);padding: 2rem 5rem 0 5rem;">
+                <div class="text-center text-lg-start" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="row row-cols-1 row-cols-lg-12" style="justify-content: space-between; gap: 2rem;">
+                        <div class="col col-lg-3" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div style="display: flex; justify-content: center; gap: 20px;" class="logo">
+                                <div style="width: fit-content; display: flex; justify-content: center; align-items: center; height: 100% ;"><img src="./images/logo.png" alt="" /></div>
+                                <div>
+                                    <h3 style="letter-spacing: 10px; color: #2387C2;" >ROOMYCO</h3>
+                                    <p style="letter-spacing: 10px; color: #2387C2;">ROOMMATE</p>
+                                </div>
+                            </div>
+                            <p>Find your prefer room and choose roommate who agree.</p>
+                            <ol class="media">
+                                <li><a href=""><img src="./images/home page/instagram.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/home page/facebook.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/home page/twitter.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/home page/tiktok.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/home page/whatsapp.png" alt=""></a></li>
+                            </ol>
+                            <p><strong>www.Romyco.com</strong></p>
+                        </div>
+                        <div class="col col-lg-3" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <h3>Terms & policies</h3>
+                            <ol class="policy">
+                                <li>Terms of service</li>
+                                <li>Privacy policy</li>
+                                <li>Cookie policy</li>
+                            </ol>
+                        </div>
+                        <div class="col col-lg-3" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <h3>Contact</h3>
+                            <ol class="contact" >
+                                <div>
+                                    <img src="./images/home page/envelope-fill.png" alt="">
+                                    <p>roomyco@room.com</p>
+                                </div>
+                                <div>
+                                    <img src="./images/home page/telephone-fill.png" alt="">
+                                    <p>+971 586 834 566</p>
+                                </div>
+                                <div>
+                                    <img src="./images/home page/location.png" alt="">
+                                    <p>Emirates</p>
+                                </div>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row text-center" style="justify-content: center; align-items: center;">
+                            <p class="col-10 copyright" >All rights are save 2024 by company.com</p>
+                    </div>
+                </div>
+            </footer>
         </main>
 
 
