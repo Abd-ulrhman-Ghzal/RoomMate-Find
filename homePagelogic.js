@@ -61,11 +61,21 @@ let cardsCon=document.querySelectorAll('.appartment-card')
 let adSeekerpage=document.getElementById('Ad-seeker')
 for(let i=0;i<cardsCon.length;i++){
   cardsCon[i].onclick = function(){
-    nav.style.cssText='position: relative;margin: 0;'
+    if(i===0){
+      nav.style.cssText='position: relative;margin: 0;'
+      roomateFinder.style.display='block'
+    adSeekerpage.style.display='none'
     homeContent.style.display='none';
     chatContent.style.display='none';
     notificationContent.style.display='none';
+    }else{
+      nav.style.cssText='position: relative;margin: 0;'
+      roomateFinder.style.display='none'
     adSeekerpage.style.display='block'
+    homeContent.style.display='none';
+    chatContent.style.display='none';
+    notificationContent.style.display='none';
+    }
     document.querySelector('body').style.backgroundImage='linear-gradient(180deg, #F8F4DB, white)'
     
   }
@@ -73,15 +83,83 @@ for(let i=0;i<cardsCon.length;i++){
 
 let roomateFinder=document.getElementById('seeker-roomate')
 let personCard=document.querySelectorAll('.person-card')
+let PeopleProfilePage=document.getElementById('people-profile-page')
+let UserProfilePage=document.getElementById('user-profile-page')
 
 for(let i=0;i<personCard.length;i++){
   personCard[i].onclick = function(){
-    nav.style.cssText='position: relative;margin: 0;'
+    roomateFinder.style.display='none'
+    adSeekerpage.style.display='none'
     homeContent.style.display='none';
     chatContent.style.display='none';
     notificationContent.style.display='none';
     adSeekerpage.style.display='none'
-    roomateFinder.style.display='block'
-    document.querySelector('body').style.backgroundImage='linear-gradient(180deg, #F8F4DB, white)'
+    PeopleProfilePage.style.display='block'
+    document.querySelector('body').style.backgroundColor='#f2eaccc6';
+  }
+}
+
+function goToUserAccount(){
+  roomateFinder.style.display='none'
+    adSeekerpage.style.display='none'
+    homeContent.style.display='none';
+    chatContent.style.display='none';
+    notificationContent.style.display='none';
+    adSeekerpage.style.display='none'
+    PeopleProfilePage.style.display='none'
+    UserProfilePage.style.display='block'
+    document.querySelector('body').style.backgroundColor='#f2eaccc6';
+}
+
+let favorites=document.getElementById('favorites')
+
+function showFav(){
+  roomateFinder.style.display='none'
+    adSeekerpage.style.display='none'
+    homeContent.style.display='none';
+    chatContent.style.display='none';
+    notificationContent.style.display='none';
+    adSeekerpage.style.display='none'
+    PeopleProfilePage.style.display='none'
+    UserProfilePage.style.display='none'
+    favorites.style.display='block'
+  document.querySelector('body').style.backgroundImage='linear-gradient(180deg, #F8F4DB, white)'
+  document.querySelector('body').style.minHeight='100svh'
+  nav.style.cssText='position: relative;margin: 0;'
+}
+let favAds=document.querySelectorAll('.fav')
+let OverAds=document.querySelectorAll('.over')
+let activeFav= document.querySelectorAll('.fav-item')
+
+function showfavAds(){
+  for(let i=0;i<favAds.length;i++){
+    favAds[i].style.display='flex'
+  }
+  for(let i=0;i<OverAds.length;i++){
+    OverAds[i].style.display='none'
+  }
+  for(let i=0;i<activeFav.length;i++){
+    if(activeFav[i].classList.contains('fav-item-active')){
+      activeFav[i].classList.remove('fav-item-active')
+    }else{
+      activeFav[i].classList.add('fav-item-active')
+    }
+  }
+}
+
+
+function showOverAds(){
+  for(let i=0;i<OverAds.length;i++){
+    OverAds[i].style.display='flex'
+  }
+  for(let i=0;i<favAds.length;i++){
+    favAds[i].style.display='none'
+  }
+  for(let i=0;i<activeFav.length;i++){
+    if(activeFav[i].classList.contains('fav-item-active')){
+      activeFav[i].classList.remove('fav-item-active')
+    }else{
+      activeFav[i].classList.add('fav-item-active')
+    }
   }
 }

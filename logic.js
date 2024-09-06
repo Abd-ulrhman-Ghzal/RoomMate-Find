@@ -158,5 +158,3 @@ let Fyesnobtns=document.querySelectorAll(".Fbtns");
             counter = counter + 1
             counterElement.innerHTML=counter
         }
-
-        // home page logic

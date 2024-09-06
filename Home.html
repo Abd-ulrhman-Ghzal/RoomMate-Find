@@ -16,7 +16,7 @@
 </head>
 <body>
         <div class="container header" id="header">
-            <div class="row" style="justify-content: center;">
+            <div class="row" style="justify-content: center; gap: 1rem;">
                 <div class="col col-lg-5 row">
                     <div style="display: flex; justify-content: center; gap: 20px;" class="logo">
                         <div style="width: fit-content; display: flex; justify-content: center; align-items: center; height: 100% ;"><img src="./images/logo.png" alt="" /></div>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col col-lg-5">
                     <ol class="nav-menu">
-                        <button><img src="./images/home page/heart-fill.png" alt=""></button>
+                        <button onclick="showFav()"><img src="./images/home page/heart-fill.png" alt=""></button>
                         <div class="dropdown">
                             <button id="chat-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                               <img src="./images/home page/chat.png" alt="" id="chat-img">
@@ -138,7 +138,7 @@
                               </div>
                             </ul>
                         </div>
-                        <button><img src="./images/home page/account.png" alt=""></button>
+                        <button onclick="goToUserAccount()"><img src="./images/home page/account.png" alt=""></button>
                         <span>|</span>
                         <div class="dropdown">
                             <button class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
@@ -1425,7 +1425,466 @@
                 </div>
             </footer>
         </main>
-
+        <main id="user-profile-page">
+            <div class="header-bg" style="height: 30svh; background-image: linear-gradient(180deg, #F8F4DB , #00000031);"></div>
+            <div class="container">
+                <div class="row main-wrapper" style="row-gap: 5rem; justify-content: space-evenly; padding-bottom: 2rem;">
+                    <div class="row row-cols-1 row-cols-lg-12" style="justify-content: space-between; column-gap: 5rem;">
+                        <div class="col col-lg-4" style="position: relative;">
+                                <img src="images/profile/user profile.png" class="people-profile-img" alt="">
+                        </div>
+                        <div class="col col-lg">
+                           <ul class="people-profile-ul">
+                            <li class="active">About</li>
+                            <li style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">Contact info</li>
+                            <li style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">Advertisements</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-12" style="column-gap: 5rem; row-gap: 5rem;">
+                        <div class="col col-lg-4">
+                            <div class="info-wrapper">
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <h1 style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 24px;line-height: 36px;color: #161720;">Raneem Doghouz</h1>
+                                    <div style="display: flex; gap: 1rem; align-items: center;">
+                                        <p>4.5</p>
+                                        <img src="images/profile/single star.png" class="w-100" alt="">
+                                    </div>
+                                </div>
+                                <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Syrian</p>
+                                <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Hi there, I am Raneem. I recently moved to Dubai for working and looking for a roommate</p>
+                                <button class="send">Edit Profile info</button>
+                                <button class="follow">Add ad</button>
+                                <div style="border: 1px solid #DAD6C8; border-radius: 20px; padding: 1rem 2rem;">
+                                    <h3 style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 24px;line-height: 36px;color: #161720;">About</h3>
+                                    <div style="display: flex; flex-direction: column; justify-content: center;gap: 2rem;">
+                                        <div style="display: flex; gap: 2rem; align-items: center;">
+                                            <div>
+                                                <img src="images/profile/Path 3614.png" class="w-100" alt="">
+                                            </div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">Dubai, Al Aweer </p>
+                                        </div>
+                                        <div style="display: flex; gap: 2rem; align-items: center;">
+                                            <div>
+                                                <img src="images/profile/person-fill (1).png" class="w-100" alt="">
+                                            </div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">Male </p>
+                                        </div>
+                                        <div style="display: flex; gap: 2rem; align-items: center;">
+                                            <div>
+                                                <img src="images/profile/cake_24dp_FILL0_wght400_GRAD0_opsz24 1.png" class="w-100" alt="">
+                                            </div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">June 3 , 1993 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 24px;line-height: 36px;color: #161720;">Contact</h3>
+                                <div class="contact-info">
+                                    <div>
+                                        <img src="images/profile/envelope-fill.png" class="w-100" alt="">
+                                    </div>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Raneem.doghouz@gmail.com</p>
+                                </div>
+                                <div class="contact-info">
+                                    <div>
+                                        <img src="images/profile/telephone-fill.png" class="w-100" alt="">
+                                    </div>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">+971 586 834 566</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg" style="display: flex; flex-direction: column; gap: 1rem;"> 
+                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;color: #161720;">Raneem’s Advertisements</p>
+                            <div class="ads-wrapper" >
+                                <div class="people-ad-card">
+                                    <div class="card-header">
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div><img src="images/profile/user card pic.png" class="w-100" alt=""></div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Ali Saebe</p>
+                                        </div>
+                                        <div>
+                                            <img src="images/profile/dots.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <div style="flex: 1;"><img src="images/profile/ad -1.png" class="w-100" alt=""></div>
+                                        <div style="flex: 1;"><img src="images/profile/ad-11.png" class="w-100" alt=""></div>
+                                    </div>
+                                    <div class="card-info">
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I have apartment and I'm looking for roommate!</p>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Dubai, Al Aweer</p>
+                                        <div class="card-fav-msg">
+                                            <button class="fav-btn"><img src="images/profile/fav.png"  alt="">Favorite</button>
+                                            <button class="msg-btn"><img src="images/profile/msg.png"  alt="">Message</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="people-ad-card">
+                                    <div class="card-header">
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div><img src="images/profile/user card pic.png" class="w-100" alt=""></div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Ali Saebe</p>
+                                        </div>
+                                        <div>
+                                            <img src="images/profile/dots.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <img src="images/profile/ad-2.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="card-info">
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I have apartment and I'm looking for roommate!</p>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Dubai, Al Aweer</p>
+                                        <div class="card-fav-msg">
+                                            <button class="fav-btn"><img src="images/profile/fav.png"  alt="">Favorite</button>
+                                            <button class="msg-btn"><img src="images/profile/msg.png"  alt="">Message</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="people-ad-card">
+                                    <div class="card-header">
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div><img src="images/profile/user card pic.png" class="w-100" alt=""></div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Ali Saebe</p>
+                                        </div>
+                                        <div>
+                                            <img src="images/profile/dots.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-info">
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I'm looking for roommate and apartment!I prefer to live with 2 people</p>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Dubai, Al Aweer</p>
+                                        <div class="card-fav-msg">
+                                            <button class="fav-btn"><img src="images/profile/fav.png"  alt="">Favorite</button>
+                                            <button class="msg-btn"><img src="images/profile/msg.png"  alt="">Message</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main id="people-profile-page">
+            <div class="header-bg" style="height: 30svh; background-image: linear-gradient(180deg, #F8F4DB , #00000031);"></div>
+            <div class="container">
+                <div class="row main-wrapper" style="row-gap: 5rem; justify-content: space-evenly; padding-bottom: 2rem;">
+                    <div class="row row-cols-1 row-cols-lg-12" style="justify-content: space-between; column-gap: 5rem;">
+                        <div class="col col-lg-4" style="position: relative;">
+                                <img src="images/profile/people profile.png" class="people-profile-img" alt="">
+                        </div>
+                        <div class="col col-lg">
+                           <ul class="people-profile-ul">
+                            <li class="active">About</li>
+                            <li style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">Contact info</li>
+                            <li style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">Advertisements</li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-12" style="column-gap: 5rem; row-gap: 5rem;">
+                        <div class="col col-lg-4">
+                            <div class="info-wrapper">
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <h1 style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 24px;line-height: 36px;color: #161720;">Ali Saebe</h1>
+                                    <div style="display: flex; gap: 1rem; align-items: center;">
+                                        <p>4.5</p>
+                                        <img src="images/profile/single star.png" class="w-100" alt="">
+                                    </div>
+                                </div>
+                                <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Egyptian</p>
+                                <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Hi there, I am Raneem. I recently moved to Dubai for working and looking for a roommate </p>
+                                <button class="send">Send message</button>
+                                <button class="follow">Follow request</button>
+                                <div style="border: 1px solid #DAD6C8; border-radius: 20px; padding: 1rem 2rem;">
+                                    <h3 style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 24px;line-height: 36px;color: #161720;">About</h3>
+                                    <div style="display: flex; flex-direction: column; justify-content: center;gap: 2rem;">
+                                        <div style="display: flex; gap: 2rem; align-items: center;">
+                                            <div>
+                                                <img src="images/profile/Path 3614.png" class="w-100" alt="">
+                                            </div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">Dubai, Al Aweer </p>
+                                        </div>
+                                        <div style="display: flex; gap: 2rem; align-items: center;">
+                                            <div>
+                                                <img src="images/profile/person-fill (1).png" class="w-100" alt="">
+                                            </div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">Male </p>
+                                        </div>
+                                        <div style="display: flex; gap: 2rem; align-items: center;">
+                                            <div>
+                                                <img src="images/profile/cake_24dp_FILL0_wght400_GRAD0_opsz24 1.png" class="w-100" alt="">
+                                            </div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #161720;">June 3 , 1993 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 24px;line-height: 36px;color: #161720;">Contact</h3>
+                                <div class="contact-info">
+                                    <div>
+                                        <img src="images/profile/envelope-fill.png" class="w-100" alt="">
+                                    </div>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Ali .Saebe@gmail.com</p>
+                                </div>
+                                <div class="contact-info">
+                                    <div>
+                                        <img src="images/profile/telephone-fill.png" class="w-100" alt="">
+                                    </div>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">+971 586 834 566</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg" style="display: flex; flex-direction: column; gap: 1rem;"> 
+                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;color: #161720;">Ali’s Advertisements</p>
+                            <div class="ads-wrapper" >
+                                <div class="people-ad-card">
+                                    <div class="card-header">
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div><img src="images/profile/cards pic.png" class="w-100" alt=""></div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Ali Saebe</p>
+                                        </div>
+                                        <div>
+                                            <img src="images/profile/dots.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; gap: 1rem;">
+                                        <div style="flex: 1;"><img src="images/profile/ad -1.png" class="w-100" alt=""></div>
+                                        <div style="flex: 1;"><img src="images/profile/ad-11.png" class="w-100" alt=""></div>
+                                    </div>
+                                    <div class="card-info">
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I have apartment and I'm looking for roommate!</p>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Dubai, Al Aweer</p>
+                                        <div class="card-fav-msg">
+                                            <button class="fav-btn"><img src="images/profile/fav.png"  alt="">Favorite</button>
+                                            <button class="msg-btn"><img src="images/profile/msg.png"  alt="">Message</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="people-ad-card">
+                                    <div class="card-header">
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div><img src="images/profile/cards pic.png" class="w-100" alt=""></div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Ali Saebe</p>
+                                        </div>
+                                        <div>
+                                            <img src="images/profile/dots.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <img src="images/profile/ad-2.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="card-info">
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I have apartment and I'm looking for roommate!</p>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Dubai, Al Aweer</p>
+                                        <div class="card-fav-msg">
+                                            <button class="fav-btn"><img src="images/profile/fav.png"  alt="">Favorite</button>
+                                            <button class="msg-btn"><img src="images/profile/msg.png"  alt="">Message</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="people-ad-card">
+                                    <div class="card-header">
+                                        <div style="display: flex; align-items: center; gap: 1rem;">
+                                            <div><img src="images/profile/cards pic.png" class="w-100" alt=""></div>
+                                            <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Ali Saebe</p>
+                                        </div>
+                                        <div>
+                                            <img src="images/profile/dots.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="card-info">
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I'm looking for roommate and apartment!I prefer to live with 2 people</p>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #707070;">Dubai, Al Aweer</p>
+                                        <div class="card-fav-msg">
+                                            <button class="fav-btn"><img src="images/profile/fav.png"  alt="">Favorite</button>
+                                            <button class="msg-btn"><img src="images/profile/msg.png"  alt="">Message</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <main id="favorites">
+            <div class="container">
+                <div class="favorites-wrapper">
+                    <div class="favorites-header">
+                        <h4>My favorite</h4>
+                        <button class="fav-dots"></button>
+                    </div>
+                    <div class="favorites-select">
+                        <ul class="fav-list">
+                            <button style="border: none; background-color: transparent;" onclick="showfavAds()"><li class="fav-item fav-item-active">Favorite</li></button>
+                            <button style="border: none; background-color: transparent;" onclick="showOverAds()"><li class="fav-item">Overlooked </li></button>
+                        </ul>
+                    </div>
+                    <div class="favorites-ads">
+                        <div class="fav-ad fav">
+                            <div>
+                                <img src="images/profile/fav-1.png" class="w-100" alt="">
+                            </div>
+                            <div style="flex: 1; gap: 1rem; display: flex;flex-direction: column;">
+                                <div>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                                        <h4>Shared bedroom, Sharjah</h4>
+                                        <div>
+                                            <img src="images/profile/stars.png" class="w-100" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <p style="color: #707070;font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;"><span style="color: #F3704A;">$ 1,000</span>/month </p>
+                                </div>
+                                <div style="display: flex;gap: 1rem; flex-wrap: wrap;align-items: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div>
+                                            <img src="images/home page/bed.png" class="w-100" alt="">
+                                        </div>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">2 Bedroom</p>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div>
+                                            <img src="images/home page/bath.png" class="w-100" alt="">
+                                        </div>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">1 Bathroom</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="fav-ad fav">
+                            <div>
+                                <img src="images/profile/fav-2.png" class="w-100" alt="">
+                            </div>
+                            <div style="flex: 1; gap: 1rem; display: flex;flex-direction: column;">
+                                <div>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                                        <h4>Shared bedroom, Sharjah</h4>
+                                        <div>
+                                            <img src="images/profile/stars.png" class="w-100" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <p style="color: #707070;font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;"><span style="color: #F3704A;">$ 600</span>/month </p>
+                                </div>
+                                <div style="display: flex;gap: 1rem; flex-wrap: wrap;align-items: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div>
+                                            <img src="images/home page/bed.png" class="w-100" alt="">
+                                        </div>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">2 Bedroom</p>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div>
+                                            <img src="images/home page/bath.png" class="w-100" alt="">
+                                        </div>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">1 Bathroom</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="fav-ad fav">
+                            <div>
+                                <img src="images/profile/person-ad-fav-1.png" class="w-100" alt="">
+                            </div>
+                            <div style="flex: 1; gap: 1rem; display: flex;flex-direction: column;">
+                                <div>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                                        <h4>Shared bedroom, Sharjah</h4>
+                                        <div>
+                                            <img src="images/profile/stars.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I'm looking for apartment! I prefer it to be sunny.</p>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="fav-ad fav">
+                            <div>
+                                <img src="images/profile/person-ad-fav-2.png" class="w-100" alt="">
+                            </div>
+                            <div style="flex: 1; gap: 1rem; display: flex;flex-direction: column;">
+                                <div>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                                        <h4>Shared bedroom, Sharjah</h4>
+                                        <div>
+                                            <img src="images/profile/stars.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I'm looking for roommate and apartment! I prefer to live with 2 people</p>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="fav-ad over">
+                            <div>
+                                <img src="images/profile/fav-2.png" class="w-100" alt="">
+                            </div>
+                            <div style="flex: 1; gap: 1rem; display: flex;flex-direction: column;">
+                                <div>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                                        <h4>Shared bedroom, Sharjah</h4>
+                                        <div>
+                                            <img src="images/profile/stars.png" class="w-100" alt="">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <p style="color: #707070;font-family: 'Poppins';font-style: normal;font-weight: 500;font-size: 16px;line-height: 24px;"><span style="color: #F3704A;">$ 600</span>/month </p>
+                                </div>
+                                <div style="display: flex;gap: 1rem; flex-wrap: wrap;align-items: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div>
+                                            <img src="images/home page/bed.png" class="w-100" alt="">
+                                        </div>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">2 Bedroom</p>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div>
+                                            <img src="images/home page/bath.png" class="w-100" alt="">
+                                        </div>
+                                        <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">1 Bathroom</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="fav-ad over">
+                            <div>
+                                <img src="images/profile/person-ad-fav-1.png" class="w-100" alt="">
+                            </div>
+                            <div style="flex: 1; gap: 1rem; display: flex;flex-direction: column;">
+                                <div>
+                                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+                                        <h4>Shared bedroom, Sharjah</h4>
+                                        <div>
+                                            <img src="images/profile/stars.png" class="w-100" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p style="font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 16px;line-height: 24px;color: #292C2D;">Hi there, I'm looking for apartment! I prefer it to be sunny.</p>
+                        </div>
+                    </div>
+                        </div>
+            </div>
+        </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./homePagelogic.js"></script>
